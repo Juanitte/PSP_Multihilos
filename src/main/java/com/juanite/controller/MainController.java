@@ -11,14 +11,10 @@ public class MainController {
     @FXML
     public Button btn_a;
     @FXML
-    public Button btn_b;
-    @FXML
-    public Button btn_c;
-    @FXML
     public Button btn_d;
 
     @FXML
-    private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
+    private void switchToA() throws IOException {
+        App.setRoot("a");
     }
 }
