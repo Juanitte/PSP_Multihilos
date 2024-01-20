@@ -28,7 +28,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <Button fx:id="btn_d" layoutX="285.0" layoutY="277.0" mnemonicParsing="false" style="-fx-background-color: #333333; -fx-border-color: #111111; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Try" textFill="#b2b2b2">
+      <Button fx:id="btn_d" layoutX="285.0" layoutY="277.0" mnemonicParsing="false" onAction="#switchToB" style="-fx-background-color: #333333; -fx-border-color: #111111; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Try" textFill="#b2b2b2">
          <font>
             <Font size="16.0" />
          </font>

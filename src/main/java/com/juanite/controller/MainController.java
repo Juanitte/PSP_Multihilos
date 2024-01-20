@@ -17,4 +17,8 @@ public class MainController {
     private void switchToA() throws IOException {
         App.setRoot("a");
     }
+    @FXML
+    private void switchToB() throws IOException {
+        App.setRoot("b");
+    }
 }
