@@ -22,6 +22,11 @@ public class DAO {
         this.conn = ConnectionMySQL.getConnect();
     }
 
+    /**
+     * Method that gets every product stored at the database as Strings.
+     * @return an ObservableList of Strings. All the products in the DB.
+     * @throws Exception
+     */
     public synchronized ObservableList<String> findAll() throws Exception {
         ObservableList<String> result = FXCollections.observableArrayList();
         try(PreparedStatement pst = this.conn.prepareStatement(FINDALL)) {
@@ -35,6 +40,11 @@ public class DAO {
         return result;
     }
 
+    /**
+     * Method that stores a new product in the database.
+     * @param name the product to store.
+     * @throws Exception
+     */
     public synchronized void save(String name) throws Exception {
 
             try(PreparedStatement pst = this.conn.prepareStatement(INSERT)) {

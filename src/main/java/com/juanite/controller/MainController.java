@@ -13,10 +13,19 @@ public class MainController {
     @FXML
     public Button btn_d;
 
+    /**
+     * Method that switches to the "chrono" screen.
+     * @throws IOException
+     */
     @FXML
     private void switchToA() throws IOException {
         App.setRoot("a");
     }
+
+    /**
+     * Method that switches to the DB Access screen.
+     * @throws IOException
+     */
     @FXML
     private void switchToB() throws IOException {
         App.setRoot("b");

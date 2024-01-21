@@ -32,6 +32,9 @@ public class BController {
         isRunning = false;
     }
 
+    /**
+     * Method that starts/stops the DB access queries.
+     */
     public void start() {
         if (!isRunning) {
             isRunning = true;
@@ -56,6 +59,10 @@ public class BController {
         }
     }
 
+    /**
+     * Method that stops the threads and goes back to main menu.
+     * @throws IOException
+     */
     public void back() throws IOException {
         isRunning = false;
         try {
@@ -66,6 +73,9 @@ public class BController {
         App.setRoot("main");
     }
 
+    /**
+     * Method that stores the given product in the DB.
+     */
     public void post() {
         new Thread(() -> {
             try {
@@ -80,6 +90,10 @@ public class BController {
         }).start();
     }
 
+    /**
+     * Method that refreshes the listview of products.
+     * @param products the ObservableList of Strings to represent in the listview.
+     */
     private void updateListView(ObservableList<String> products) {
         javafx.application.Platform.runLater(() -> list_products.setItems(products));
     }
